@@ -1,16 +1,26 @@
+
+
 //game constants & variables
 let inputDir={x:0, y:0};
 const foodSound=new Audio('food.mp3');
-const gameOverSound=new Audio('gameover.mp3');
+// const gameOverSound=new Audio('gameover.mp3');
 const moveSound=new Audio('');
 const musicSound=new Audio('music.mp3');
-let speed=10;
+let speed=5;
 let score=0;
+let highscore=localStorage.getItem("score")||score
 let lastPaintTime=0;
 let snakeArr=[
     {x:13, y:15}
 ]
 food={x:6, y:7};
+
+// function for manual speed
+speedfun()
+function speedfun(){
+    let sp=document.getElementById("speed").value
+    speed=+sp
+}
 
 //game function
 function main(ctime){
@@ -41,14 +51,26 @@ function isCollide(snake){
 function gameEngine(){
     //part 1 updating the snake array & food
     if(isCollide(snakeArr)){
-        gameOverSound.play();
-        musicSound.pause();
+        // gameOverSound.play();
+        // musicSound.pause();
         inputDir={x:0, y:0};
         alert("Game over. press any key to play again!");
+        if(highscore<=score){
+            localStorage.setItem("score",score)
+            let highscoreBox=document.getElementById("highscoreBox")
+            highscoreBox.innerHTML="High Score: "+ score;
+        }
+        window.location.reload()
         snakeArr=[{x:13,y:15}];
         //musicSound.play();
         score=0;
     }
+
+
+    let highscoreBox=document.getElementById("highscoreBox")
+    highscoreBox.innerHTML="High Score: "+ highscore;
+
+
 
     //if you have eaten the food, increment the score and regenerate the food
     if(snakeArr[0].y===food.y && snakeArr[0].x===food.x){
@@ -128,3 +150,21 @@ window.addEventListener('keydown', e=>{
             break;
     }
 });
+
+
+function buttonup(){
+    inputDir.x= 0;
+    inputDir.y= -1;
+}
+function buttondown(){
+    inputDir.x= 0;
+    inputDir.y= 1;
+}
+function buttonleft(){
+    inputDir.x= -1;
+    inputDir.y= 0;
+}
+function buttonright(){
+    inputDir.x= 1;
+    inputDir.y= 0;
+}

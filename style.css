@@ -1,35 +1,60 @@
 *{
     padding: 0;
     margin: 0;
+    
+}
+body{
+    background: url("bg.jpg");
+}
+
+/* #speed{
+    position: absolute;
+    top: 9px;
+    left: 30px;
+} */
+
+/* #scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(18, 20, 22);
+} */
+
+#cont{
+    padding-top: 10px;
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+display:grid;
+grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+gap: 10px;
+}
+#speed{
+    width: 45px;
 }
 
 .body{
-    background: url("bg.jpg");
-    min-height: 100vh;
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    /* border: 3px solid teal; */
+    /* background: url("bg.jpg"); */
+    /* min-height: 100vh; */
+    /* background-size: 100vw 100vh;
+    background-repeat: no-repeat; */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+}
+#buttons{
+    margin-top: 20px;
+}
+#buttons>div{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-#scoreBox{
-    position: absolute;
-    top: 9px;
-    right: 60px;
-    font-size: 40px;
-    font-weight: bold;
-   color: aliceblue;
-}
-
-#madeby{
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: aliceblue;
-}
 
 #board{
     background: url("board.jpg");
