@@ -2,10 +2,10 @@
 
 //game constants & variables
 let inputDir={x:0, y:0};
-const foodSound=new Audio('food.mp3');
-// const gameOverSound=new Audio('gameover.mp3');
+const foodSound=new Audio('./voice/food.mp3');
+// const gameOverSound=new Audio('./voice/gameover.mp3');
 const moveSound=new Audio('');
-const musicSound=new Audio('music.mp3');
+const musicSound=new Audio('./voice/music.mp3');
 let speed=5;
 let score=0;
 let highscore=localStorage.getItem("score")||score

@@ -4,7 +4,7 @@
     
 }
 body{
-    background: url("bg.jpg");
+    background: url("./image/bg.jpg");
 }
 
 /* #speed{
@@ -27,9 +27,9 @@ body{
     /* border: 1px solid red; */
     width: 50%;
     margin: auto;
-display:grid;
-grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-gap: 10px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    gap: 10px;
 }
 #speed{
     width: 45px;
@@ -48,16 +48,26 @@ gap: 10px;
 }
 #buttons{
     margin-top: 20px;
+    display: none;
 }
 #buttons>div{
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 60px;
 }
+#buttons>div>span{
+    width: 30px;
+}
+@media screen and (max-width: 900px) {
+    #buttons{
+        display: flex;
+        flex-direction: column;
+    }
+  }
 
 
 #board{
-    background: url("board.jpg");
+    background: url("./image/board.jpg");
     width: 90vmin;
     height: 92vmin;
     border: 2px solid black;
