@@ -1,4 +1,3 @@
-<img src="./images/logo.sample.png" alt="Logo of the project" align="right">
 
 # Snake Xenzia
 > Snake Xenzia is a great memory of our life, for rewind purpose. One day, I and my friends gathered, talked about mobile game and of course, Snake Xenzia on 1110i is top of mind. So, I decided to remake Snake Xenzia Rewind to celebrate our rewind youth with the very 1st mobile game experience.
